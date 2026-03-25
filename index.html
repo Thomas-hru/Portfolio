@@ -14,38 +14,42 @@
         <nav>
             <div class="logo">Thomas.H</div>
             <ul>
-                <li><a href="#about">A propos</a></li>
-                <li><a href="#competences">Compétences</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#hero" onclick="openTab(event, 'hero')">Accueil</a></li>
+                <li><a href="#about" onclick="openTab(event, 'about')">A propos</a></li>
+                <li><a href="#competences" onclick="openTab(event, 'competences')">Mes compétences</a></li>
+                <li><a href="#contact" onclick="openTab(event, 'contact')">Contact</a></li>                
                 <li><a href="projet.html">Projets</a></li>
-                <li><a href="cv.html">CV</a></li>
+                <li><a href="cv.html">Mon CV</a></li>
+            
             </ul>
         </nav>
     </header>
 
     <!-- Section Hero -->
-    <section class="hero">
-        <div class="hero-content">
+    <section id ="hero" div class="hero tab-content">
             <h1>Bienvenue sur mon Portfolio</h1>
             <p>Je suis HOARAU Thomas, étudiant en deuxième année de BUT <br> <span class="rt" >Réseaux & Télécommunications</span> <br><br>
                 Veuillez retrouver ci-dessous la revue de certains des projets réalisés dans le cadre de ma formation ainsi qu'un aperçu de mes compétences.</p>
                 <br>
                 <a href="projet.html" class="btn">Voir mes projets</a>
-        </div>
+
     </section>
 
     <!-- Section A propos -->
-    <section id="about" class="about">
-        <h1>A propos de moi</h1>
-        
-            <p>Tout d’abord, je suis HOARAU Thomas, j’ai actuellement 19 ans et je suis étudiant <br>en deuxième année de <b>BUT - Réseaux & Télécom</b> à l’IUT de La Réunion. 
-            <br>Sérieux et discipliné, je suis profondément investi dans ce que j’entreprend.
-        </p><br>
+    <section id="about" class="tab-content hidden">
             
             <div class="about-exp">
+                <h2><span class="rt" >A propos de moi</span></h2>
+                <div class="exp-card">
+                    
+                        <img src="moi.jpg" alt="">
+                </div>
+                <p>Tout d’abord, je suis HOARAU Thomas, j’ai actuellement 19 ans et je suis étudiant <br>en deuxième année de <b>BUT - Réseaux & Télécom</b> à l’IUT de La Réunion. 
+                <br>Sérieux et discipliné, je suis profondément investi dans ce que j’entreprend.
+                </p><br>
             <!-- <h3> Experiences et diplômes:</h3>
             <br> -->
-            <div calss="about-all">
+            <!-- <div calss="about-all">
                 <h4><span class="rt" >Experiences : </span></h4><br>
                 <div class="about-exp-diplome">
                     
@@ -117,7 +121,7 @@
                             </div>
                         </div>
                 </div>
-            </div>
+            </div> -->
             Vous retrouverez mon parcours et mon experience sur mon CV :</p>
              <a href="cv.html" class="btn">Voir mon CV</a>
         </div>
@@ -162,49 +166,15 @@
       <p>Fortement inspiré par le mouvement fashion, j'acorde une attention particulière à la mode et aux sneackers.</p>
     </div>
 
-    <!-- <div class="interest-card">
-      <div class="icon">✈️</div>
-      <h3>Voyages & Découverte</h3>
-      <p>Découvrir de nouvelles cultures, paysages et modes de vie m’inspire beaucoup.</p>
-    </div> -->
   </div>
 </section>
 
         </div>   
     </section>
 
-    <!-- Section Projets -->
-    <!-- <section id="projects" class="projects">
-        <h1>Projets</h1>
-        <div class="project-container">
-            <div class="project">
-                <img src="Projet1.PNG" alt="Projet 1">
-                <h3>1er Projet :</h3>
-                <h4>Se sensibiliser a l'hygiène informatique et à la cyberssécurité.</h4>
-                <p>Ce projet consiste à se renseigner et acquérir des compétences dans le domaine de la cybersécurité dans le but d'exposer une présetation envers un publique novice sur les risques liées à l'utilisation de système numérqiue.</br> 
-                Lors de ce projet, nous avons acquis la certification du MOOC de l'ANSII qui englobe plusieurs thèmes de la sécurié numérique.</p>
-            </div>
-            <div class="project">
-                <img src="Projet2.PNG" alt="Projet 2">
-                <h3>2éme Projet :</h3>
-                <h4>S'initier aux réseaux informatiques.</h4>
-                <p>Ce projet consiste au pilotage à distance d'un circuit contenant des LEDs ainsi que des capteurs à l'aide d'une Raspberry PI 5.</br>
-                Lors de ce projet, nous avons du configurer l'OS du mini-ordinateur, maitriser le protocole SSH pour la connexion à distance ou encore maitriser le langage python pour mettre en place des programmes excécutabes pour la lecturer des capteurs ou encore le pilotage des LEDs.</p>
-            </div>
-            <div class="project">
-                <img src="Projet3.PNG" alt="Projet 1">
-                <h3>3éme Projet :</h3>
-                <h4>Rapport audit de couverture du département R&T.</h4>
-                <p>Ce projet consiste à rediger un document professionel sur la couverture du réseau Wi-Fi du département R&T de l'IUT.  <br>
-                Lors de ce projet, nous avons pu faire face aux attentes auquel nous pourronr être confronté dans le monde professionnel et ce projet nous a aussi permis d'engrenger certaines compétences dans le domaine des réseaux. </p>
-            </div>
-        </div>
-    </section> -->
-    
-
     
 <!-- Section Compétences -->
- <section id="competences">
+ <section id="competences" class="tab-content hidden">
     <h4><span class="rt" >MES COMPÉTENCES</span></h4><br>
 
     <div class="competences-section">
@@ -341,7 +311,7 @@
 
 <!-- Section Contact -->
     <section id="contact-overall" class="contact-overall">
-    <section id="contact" class="contact">
+    <section id="contact" class="tab-content hidden">
         
         <h1>Contact</h1>
         <p>📞0693 32 64 75<br>
@@ -384,4 +354,22 @@
     </footer>
 </body>
 </html>
+<script>
+    function openTab(event, tabName) {
+    event.preventDefault();
 
+    // 1. On cache toutes les sections en ajoutant 'hidden'
+    let contents = document.getElementsByClassName("tab-content");
+    for (let i = 0; i < contents.length; i++) {
+        contents[i].classList.add("hidden");
+    }
+
+    // 2. On affiche la section demandée en retirant 'hidden'
+    document.getElementById(tabName).classList.remove("hidden");
+
+    // 3. Gestion des liens actifs (visuel navbar)
+    let navLinks = document.querySelectorAll("nav ul li a");
+    navLinks.forEach(link => link.classList.remove("active-link"));
+    event.currentTarget.classList.add("active-link");
+}
+</script>

@@ -16,7 +16,7 @@
 
 /* On cache toutes les sections par défaut */
 .tab-content {
-    padding: 150px;
+    /* padding: 150px; */
     animation: fadeIn 0.5s; /* Petit effet de transition sympa */
 }
 
@@ -65,9 +65,10 @@ background: var(--muted);
 color: #f1f5f9;
 justify-content: center;
 align-items: center;
-height: 100vh;
+height: 0vh;
 margin: 0;
-
+line-height: 1.6;
+color: #333;
 }
 
 
@@ -83,24 +84,21 @@ html {
     text-align: center;
 }
 
-body {
-    line-height: 1.6;
-    color: #333;
-}
 
 /* ---section haut de page ----- */
 header {
     background-color: #333;
     color: #fff;
-    padding: 1rem 2rem;
+    padding: 1rem 1rem;
     position: fixed;
     width: 100%;
     top: 0;
     display: flex;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     align-items: center;
     z-index: 1000;
     text-align: center;
+   
 }
 
 header .logo {
@@ -112,16 +110,19 @@ header .logo {
 header ul {
     list-style: none;
     display: flex;
+    
 }
 
 header ul li {
     margin-left: 1.5rem;
+    
 }
 
 header ul li a {
     color: #fff;
     text-decoration: none;
     font-weight: bold;
+     flex: 1;
 }
 
 header ul li a:hover {
@@ -132,12 +133,15 @@ nav {
 display: flex;
 align-items: center;
 justify-content: center;
+ flex: 1;
 }
 
 .hero {
     background-color: black;
-    height: 100vh;
+    height: 90vh;
+    margin-top: 70px ;
     color: #fff;
+    /* margin-top: 150px; */
     /* display: flex; */
     justify-content: center;
     align-items: center;
@@ -151,6 +155,7 @@ justify-content: center;
 
 
 .hero h1 {
+    /* margin-top: 150px; */
     font-size: 3rem;
     margin-bottom: 1rem;
 }
@@ -159,22 +164,8 @@ justify-content: center;
   font-size: 2rem;
 }
 
- /* .btn {
-    display: inline-block;
-    background-color: #f4a261;
-    color: #fff;
-    padding: 0.75rem 1.5rem;
-    text-decoration: none;
-    border-radius: 5px;
-    margin-top: 1rem;
-}
-
-.btn:hover {
-    background-color: #e76f51;
-} */
-
 section {
-    padding: 4rem 2rem;
+    /* padding: 5rem 2rem; */
     text-align: center;
 }
 
@@ -182,127 +173,42 @@ section {
 
 .about {
     color: #000000;
-    /* justify-content: center;
-    align-items: center;
-    text-align: center; */
-    /* display: flex; */
-}
-
-.about h1{
-  font-size: 3rem;
-  margin-bottom: 1rem;
-}
-
-.about .project {
-    background: #000000;
-    padding: 1rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(58, 57, 57, 0.1);
-    max-width: 350px;
-    color:#fff;
-}
-
-.about .project-container {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 2rem;
-}
-
-.about h1 {
-    font-size: 3rem;
-    margin-bottom: 100px;
-}
-
-/* .about img {
+    flex-direction: row !important;
+    display: flex !important;          /* Active le mode Flexbox */
+  justify-content: center; /* Centre les cartes horizontalement */
+  align-items: flex-start;   /* Aligne les cartes pour qu'elles aient la même hauteur */
+  gap: 30px;
     width: 100%;
-    border-radius: 8px 8px 0 0;
-} */
-
-.about ul {
-    list-style:none;
-}
-
-.about li {
-    font-size: 1rem;
-    margin: 0.3rem 0;
+    padding: 20px;
+    box-sizing: border-box; /* Pour que le padding ne casse pas la largeur */
 }
 
 .about-exp{
-background: rgba(255, 255, 255, 0.5);
-border-radius: 16px;
-padding: 30px 40px;
-box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
-max-width: 600px;
-width: 90%;
-/* margin-left: auto;
-margin-right: auto; */
-margin-bottom: 30px; 
-
+  flex: 1;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 16px;
+  padding: 30px 40px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);/* max-width: 400px; */
+  width: 100%;
+  margin-bottom: 50px;
 }
 
-/* .about-all{
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 20px;
-} */
-
-
-/* .about-exp-diplome { 
-  background: rgba(0, 0, 0, 5);
-border-radius: 16px;
-padding: 20px 30px;
-box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
-max-width: 1000px;
-width: 90%;
-margin-left: auto;
-margin-right: auto;
-margin-bottom: 30px; 
-color: var(--blanc);
-display: flex;
-} */
-/* }
-
-.about-diplome{
-
-  background: rgba(255, 255, 255, 05);
-border-radius: 16px;
-padding: 30px 40px;
-box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
-max-width: 500px;
-width: 90%;
-margin-left: auto;
-margin-right: auto;
-margin-bottom: 30px; 
-
-} */
-
+.about-card-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
 
 .exp-card{
- background: rgba(255, 255, 255, 5);
-  border-radius: 16px;
-  overflow: hidden;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.25);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
-  margin: 10px;
   width : 300px;
   height : 300px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
     background: rgba(0, 0, 0, 5);
-border-radius: 16px;
-padding: 20px 30px;
-box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
-margin-left: auto;
-margin-right: auto;
-margin-bottom: 30px; 
-color: var(--blanc);
-display: flex;
+    transition: transform .3s ease, box-shadow .3s ease;
+   ;
 }
 
 .exp-card:hover {
-  transform: translateY(-6px);
+  transform: translateY(-3px);
   box-shadow: 0 6px 25px rgba(0,0,0,0.4);
 }
 
@@ -332,69 +238,29 @@ display: flex;
   margin-bottom: 12px;
 }
 
-.diplome-card{
- background: rgba(255, 255, 255, 5);
-  border-radius: 16px;
-  overflow: hidden;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.25);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
-  margin: 10px;
-  
-}
-
-.diplome-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 6px 25px rgba(0,0,0,0.4);
-}
-
-.diplome-card img {
-  width: 80%;
-  height: 200px;
-  object-fit: cover;
-}
-
-.diplome-card .content {
-  padding: 18px;
-  text-align: left;
-}
-
-.diplome-card h3 {
-  font-size: 18px;
-  margin-bottom: 8px;
-  color: var(--bg);
-}
-
-.diplome-card p {
-  font-size: 14px;
-  color: var(--card);
-  margin-bottom: 12px;
-}
-
-
-
-
-
 /* ------section centre d'intéret--------- */
 
-#interets {
-  background: rgba(255, 255, 255, 0.5);
+.interets {
+  flex: 1;
+  background: rgba(136, 134, 134, 0.5);
   border-radius: 16px;
-  padding: 70px;
-  max-width : 600px;
+  padding: 30px 40px;
+  max-width : 400px;
+  width : auto ;
   /* margin-left: auto;
   margin-right: auto; */
-  color: #f1f5f9;
+  /* color: #f1f5f9;
   text-align: center;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25); */
 }
 
-#interets h2 {
+.interets h2 {
   font-size: 28px;
   margin-bottom: 10px;
   color: var(--bg);
 }
 
-#interets .intro {
+.interets .intro {
   color: var(--card);
   margin-bottom: 30px;
 }
@@ -428,9 +294,7 @@ display: flex;
   color: var(--card);
 }
 
-
-
-/* Section Compétences */
+/*---------------- Section Compétences---------------- */
 #competences {
     max-width: 1000px;
     margin: 0 auto;
@@ -445,12 +309,17 @@ display: flex;
     letter-spacing: 2px;
 }
 
+.competence-flex{
+  display: flex;
+}
+
 .competences-section {
-    background: white;
+    background: rgba(255, 255, 255, 0.5);
     border-radius: 20px;
     padding: 50px;
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
     margin-bottom: 30px;
+    
 }
 
 .section-title {
@@ -463,12 +332,14 @@ display: flex;
 }
 
 .competences-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    /* display: flex; */
+    /* grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); */
     gap: 20px;
 }
 
 .competence-item {
+  margin: 10px;
+  flex: 1;
     padding: 20px;
     background: #f7fafc;
     border-radius: 10px;
@@ -515,32 +386,14 @@ display: flex;
 }
 
 
-
-/* .bar {
-background: rgba(255, 255, 255, 0.1);
-border-radius: 999px;
-overflow: hidden;
-height: 10px;
-}
-.bar-fill {
-background: linear-gradient(90deg, #7c3aed, #06b6d4);
-height: 100%;
-border-radius: 999px;
-} */
-
-/* ---section contact---- */
-
-/* .contact-overall{
-  background-color: #000000;
-  
-} */
 .contact {
     
     color: #ffffff;
+    background-color: rgba(255 ,255,255,0.5);
     justify-content: center;
     align-items: center;
     text-align: center;
-    background: var(--bg);
+    /* background: var(--bg); */
     border-radius: 16px;
     padding: 30px 40px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
@@ -551,6 +404,16 @@ border-radius: 999px;
     margin-top: 20px;
     margin-bottom: 20px;
 
+}
+
+.contact_1{
+  background-color: rgba(255 ,255,255,0.5);
+  border-radius: 16px;
+    padding: 30px 40px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 .contact h1 {
     font-size: 3rem;

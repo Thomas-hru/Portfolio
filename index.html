@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
-    <link rel="icon" href="">
+    <link rel="icon" href="img/logo.png">
     <link rel="stylesheet" href="style.css">
     <link href="https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@800&f[]=boska@501&display=swap" rel="stylesheet">
 
@@ -20,7 +20,7 @@
                 <li><a href="#hero" onclick="openTab(event, 'hero')">Accueil</a></li>
                 <li><a href="#about" onclick="openTab(event, 'about')">A propos</a></li>
                 <li><a href="#competences" onclick="openTab(event, 'competences')">Mes compétences</a></li>
-                <li><a href="#contact" onclick="openTab(event, 'contact')">Contact</a></li>
+                <!-- <li><a href="#contact" onclick="openTab(event, 'contact')">Contact</a></li> -->
                 <li><a href="#projets" onclick="openTab(event, 'projets')">Mes projets</a></li>
                 <li><a href="#cv" onclick="openTab(event, 'cv')">Mon CV</a></li>
                 
@@ -34,7 +34,7 @@
         <h1>Bienvenue sur mon Portfolio</h1>
         <p>Je suis HOARAU Thomas, étudiant en deuxième année de BUT <br> <span class="rt">Réseaux &
                 Télécommunications</span> <br><br>
-            Veuillez retrouver ci-dessous la revue de certains des projets réalisés dans le cadre de ma formation ainsi
+            Veuillez retrouver sur ce site une revue de certains de mes projets réalisés dans le cadre de ma formation ainsi
             qu'un aperçu de mes compétences.</p>
         <br>
         <a href="#projets" onclick="openTab(event, 'projets')" class="btn">Voir mes projets</a>
@@ -224,7 +224,7 @@
 
 
     <!-- Section Contact -->
-    <section id="contact-overall" class="contact-overall">
+    <!-- <section id="contact-overall" class="contact-overall">
         <section id="contact" class="tab-content hidden">
             <br><br><br>
             <div class="contact_1">
@@ -247,7 +247,7 @@
                 </form>
             </div>
         </section>
-    </section>
+    </section> -->
 
 
     <!-- -----------Projet--------------------- -->
@@ -259,142 +259,103 @@
     
 
     <div class="project-card">
-      <img src="img/stormshield.webp" alt="GNS3">
+      <img src="img/stormshield.webp" alt="stormshield">
       <div class="content">
         <h3>Réseau Sécurisé</h3>
         <p>Sécurisation d'un réseau avec Pare-Feu Stormshiekd : Mis en place de règles de filtrage/NAT, DMZ et LAN</p>
         <div class="tags">
           <span>Stormshield</span><span>Firewall</span><span>NAT</span>
         </div>
-        <a href="401.pdf" class="btn">Voir plus</a>
+        <a href="doc/401.pdf" class="btn">Voir plus</a>
       </div>
     </div>
 
     <div class="project-card">
-      <img src="410.png" alt="MPLS">
+      <img src="img/410.png" alt="MPLS">
       <div class="content">
         <h3>VPN MPLS</h3>
         <p>Création d'un mini-réseau d'opérateur et mis en place d'un lien VPN MPLS avec la manipulation de BGP, MP-BGP, IGP... Sur des routeurs Cisco physique</p>
         <div class="tags">
           <span>MPLS</span><span>VPN</span><span>Cisco</span>
         </div>
-        <a href="410.pdf" class="btn">Voir plus</a>
+        <a href="doc/410.pdf" class="btn">Voir plus</a>
       </div>
     </div>
 
     <div class="project-card">
-      <img src="projet.png" alt="projet">
+      <img src="img/tp2410.png" alt="BGP">
       <div class="content">
-        <h3>Infrastructure télécom' 4g/5g</h3>
-        <p>Reflection et conception d'une infrastructure de télécommunications de réseau mobile 4G/5G</p>
+        <h3>Manipulation BGP</h3>
+        <p>Création d'un mini-réseau d'opérateur et manipulatoon de BGP lors de la mis en place d'une relation de peering et de transit avec un autre opérateur simuler par une autre équipe</p>
         <div class="tags">
-          <span>Télécom'</span><span>4G</span><span>5G</span><span>Antenne</span>
+          <span>BGP</span><span>Peering</span><span>Transit</span>
         </div>
-        <a href="projet.pdf" class="btn">Voir plus</a>
+        <a href="doc/tp2410.pdf" class="btn">Voir plus</a>
       </div>
     </div>
 
     <div class="project-card">
-      <img src="409.png" alt="devops">
+      <img src="img/projet.png" alt="projet">
+      <div class="content">
+        <h3>Infrastructure Télécom' 4G/5G</h3>
+        <p>Reflection sur la conception d'une infrastructure de télécommunications de réseau mobile 4G/5G</p>
+        <div class="tags">
+          <span>Télécom</span><span>4G</span><span>5G</span><span>Antenne</span>
+        </div>
+        <a href="doc/projet.pdf" class="btn">Voir plus</a>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <img src="img/409.png" alt="devops">
       <div class="content">
         <h3>Outils DevOps</h3>
         <p>Introduction et utilisation de la contenerisation avec Docker, Git, GitLab et mis en place d'une pipeline CI/CD</p>
         <div class="tags">
           <span>Docker</span><span>Git</span><span>CI/CD</span>
         </div>
-        <a href="409.pdf" class="btn">Voir plus</a>
+        <a href="doc/409.pdf" class="btn">Voir plus</a>
       </div>
     </div>
 
     <div class="project-card">
-      <img src="317.png" alt="Virtualisation">
+      <img src="img/317.png" alt="Virtualisation">
       <div class="content">
         <h3>Virtualisation Avancée</h3>
         <p>Création et configuration d'un datacenter et d'un cluster entre plusieurs ESXi depuis une VM de gestion vCenter </p>
         <div class="tags">
           <span>ESXi</span><span>vCenter</span><span>Cluster</span><span>Datacenter</span>
         </div>
-        <a href="317.pdf" class="btn">Voir plus</a>
+        <a href="doc/317.pdf" class="btn">Voir plus</a>
       </div>
     </div>
 
     <div class="project-card">
-      <img src="103.png" alt="Audit Wi-Fi">
+      <img src="img/103.png" alt="Audit Wi-Fi">
       <div class="content">
         <h3>Réalisation d'un audit Wi-Fi</h3>
         <p>Réalisation d'un audits Wi-Fi professionnel pour mesurer la qualité du réseau Wi-Fi du département Réseaux & Télécom.</p>
         <div class="tags">
           <span>NetSpot</span><span>Canva</span>
         </div>
-        <a href="103.pdf" class="btn">Voir plus</a>
-      </div>
-    </div>
-
-    <div class="project-card">
-      <img src="316.png" alt="VoIP">
-      <div class="content">
-        <h3>Mis en place d'un evironnement de VoIP</h3>
-        <p>Mis en place d'un LAB packet tracer de VoIP permettant l'interconnexion et la communication entre deux réseaux différents à travers des Serveur TFTP/Call Manager Express </p>
-        <div class="tags">
-          <span>ToIP</span><span>PacketTracer</span>
-        </div>
-        <a href="316.pdf" class="btn">Voir plus</a>
-      </div>
-    </div>
-
-    <div class="project-card">
-      <img src="antenne.png" alt="Antenne">
-      <div class="content">
-        <h3>Mis en place de dispositif de Télécommunications</h3>
-        <p>Mise en place d'antennes dans le but de capter et analyser des signaux TNT, FM, ADSB...</p>
-        <div class="tags">
-          <span>Antennes</span><span>Radio</span>
-        </div>
-        <a href="304.pdf" class="btn">Voir plus</a>
-      </div>
-    </div>
-
-    <div class="project-card">
-      <img src="reseau.png" alt="Réseau">
-      <div class="content">
-        <h3>Création d'une topologie réseau et déploiement de services</h3>
-        <p>Mise en place d'une topologie réseau en physique fonctionnel avec le déploiement de service (Samba, Moodle & DHCP)</p>
-        <div class="tags">
-          <span>Windows/Linux</span><span>Cisco</span><span>Services réseaux</span>
-        </div>
-        <a href="204.pdf" class="btn">Voir plus</a>
-      </div>
-    </div>
-
-    <div class="project-card">
-      <img src="302.png" alt="Web">
-      <div class="content">
-        <h3>Création d'une application Web</h3>
-        <p>Mise en place d'une application Web de messagerie permettant l'échange de messages entre plusieurs utilisateurs ayant un compte.
-        </p>
-        <div class="tags">
-          <span>CSS</span><span>TypeScript</span><span>WebSocket</span>
-        </div>
-        <a href="302.pdf" class="btn">Voir plus</a>
-      </div>
-    </div>
-
-
-    <div class="project-card">
-      <img src="303.png" alt="">
-      <div class="content">
-        <h3>Conception d'un résau informatique adapté au multimédia</h3>
-        <p>Conception entière d'un réseau informatique pour une PME avec solution multimédia (SAN, FireWall, VPN...) et réalisation d'un PoC avec point d'accés Wi-Fi, portail captif, servuer de streaming...
-        </p>
-        <div class="tags">
-          <span>Multimédia</span><span>Réseau</span><span>Sécurité</span>
-        </div>
-        <a href="303.pdf" class="btn">Voir plus</a>
+        <a href="doc/103.pdf" class="btn">Voir plus</a>
       </div>
     </div>
 
      <div class="project-card">
-      <img src="306.png" alt="">
+      <img src="img/301.png" alt="OSPF">
+      <div class="content">
+        <h3>Manipulation OSPF, routage Inter-Vlan et ACL</h3>
+        <p>Mis en place d'un LAB packet tracer complet mettant en place un réseau OSPF avec plusieurs zones, routage Inter-Vlan et règle de filtrage ACL.</p>
+        <div class="tags">
+          <span>OSPF</span><span>Inter-Vlan</span><span>ACL</span><span>PacketTracer</span>
+        </div>
+        <a href="doc/301.pdf" class="btn">Voir plus</a>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <img src="img/306.png" alt="">
       <div class="content">
         <h3>Prise de mesure et soudure de fibre optique</h3>
         <p>Utilisation de la réfléctométrie et de la photométrie pour effectuer des mesures sur une fibre optique.
@@ -403,18 +364,106 @@
         <div class="tags">
           <span>Réfléctométrie</span><span>Photométrie</span><span>Soudure</span>
         </div>
-        <a href="306.pdf" class="btn">Voir plus</a>
+        <a href="doc/306.pdf" class="btn">Voir plus</a>
       </div>
     </div>
+
+    <div class="project-card">
+      <img src="img/316.png" alt="VoIP">
+      <div class="content">
+        <h3>Mis en place d'un evironnement de VoIP</h3>
+        <p>Mis en place d'un LAB packet tracer de VoIP permettant l'interconnexion et la communication entre deux réseaux différents à travers des Serveur TFTP/Call Manager Express </p>
+        <div class="tags">
+          <span>ToIP</span><span>PacketTracer</span>
+        </div>
+        <a href="doc/316.pdf" class="btn">Voir plus</a>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <img src="img/antenne.png" alt="Antenne">
+      <div class="content">
+        <h3>Mis en place de dispositif de Télécommunications</h3>
+        <p>Mise en place d'antennes dans le but de capter et analyser des signaux tel que la TNT, la radio FM ou encore les signaux ADS-B...</p>
+        <div class="tags">
+          <span>Antennes</span><span>Radio</span>
+        </div>
+        <a href="doc/304.pdf" class="btn">Voir plus</a>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <img src="img/304-2.webp" alt="AD">
+      <div class="content">
+        <h3>Mis en place d'un Windows Active Directory</h3>
+        <p>Mise en place d'un contrôleur de domaine Active Directory sous Windows Server 2022, conception et organisation d'un annuiare et déploiement de GPO</p>
+        <div class="tags">
+          <span>AD</span><span>Windows</span>
+        </div>
+        <a href="doc/304-2.pdf" class="btn">Voir plus</a>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <img src="img/reseau.png" alt="Réseau">
+      <div class="content">
+        <h3>Création d'une topologie réseau et déploiement de services</h3>
+        <p>Mise en place d'une topologie réseau en physique fonctionnel avec le déploiement de service (Samba, Moodle & DHCP)</p>
+        <div class="tags">
+          <span>Windows/Linux</span><span>Cisco</span><span>Services réseaux</span>
+        </div>
+        <a href="doc/204.pdf" class="btn">Voir plus</a>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <img src="img/302.png" alt="Web">
+      <div class="content">
+        <h3>Création d'une application Web</h3>
+        <p>Mise en place d'une application Web de messagerie permettant l'échange de messages entre plusieurs utilisateurs ayant un compte.
+        </p>
+        <div class="tags">
+          <span>CSS</span><span>TypeScript</span><span>WebSocket</span>
+        </div>
+        <a href="doc/302.pdf" class="btn">Voir plus</a>
+      </div>
+    </div>
+
+
+    <div class="project-card">
+      <img src="img/303.png" alt="">
+      <div class="content">
+        <h3>Conception d'un résau informatique adapté au multimédia</h3>
+        <p>Conception entière d'un réseau informatique pour une PME avec solution multimédia (SAN, FireWall, VPN...) et réalisation d'un PoC avec point d'accés Wi-Fi, portail captif, servuer de streaming...
+        </p>
+        <div class="tags">
+          <span>Multimédia</span><span>Réseau</span><span>Sécurité</span>
+        </div>
+        <a href="doc/303.pdf" class="btn">Voir plus</a>
+      </div>
+    </div>
+
         <div class="project-card">
-            <img src="PI.png" alt="Projet Raspberry Pi">
+            <img src="img/PI.png" alt="Projet Raspberry Pi">
             <div class="content">
                 <h3>Initiation aux réseaux informatiques</h3>
                 <p>Configuration d’un Raspberry Pi pour piloter des LEDs et capteurs à distance via SSH et scripts Python.</p>
                 <div class="tags">
                 <span>Linux</span><span>SSH</span><span>Python</span><span>Raspberry Pi</span>
                 </div>
-                <a href="102.pdf" class="btn">Voir plus</a>
+                <a href="doc/102.pdf" class="btn">Voir plus</a>
+            </div>
+        </div>
+
+    <div class="project-card">
+            <img src="img/303-2.png" alt="DNS">
+            <div class="content">
+                <h3>Déploiement d'un serveur DNS sur Linux</h3>
+                <p>Installation et configuration d'un serveur DNS sur Linux en utilsant Bind9.</p>
+                <div class="tags">
+                <span>Linux</span><span>DNS</span><span>Bind9</span>
+                </div>
+                <a href="doc/303-2.pdf" class="btn">Voir plus</a>
             </div>
         </div>
   </div>
@@ -429,7 +478,7 @@
   <div class="projects-grid">
     
     <div class="project-card">
-      <img src="jpo.jpg" alt="jpo">
+      <img src="img/jpo.jpg" alt="jpo">
       <div class="content">
         <h3>Journée Portes Ouvertes 2025</h3>
         <p>Présentation du BUT - Réseaux & Télécommunications lors de la journée portes ouvertes de l'IUT, interactions et échanges avec les futurs étudiants en recherche d'une formation post-bac </p>
@@ -441,7 +490,7 @@
     </div>
 
     <div class="project-card">
-      <img src="forum.jpg" alt="forum">
+      <img src="img/forum.jpg" alt="forum">
       <div class="content">
         <h3>Forum des anciens élèves 2025</h3>
         <p>Participation au forum des anciens élève 2025 de Lycée Jean Joly afin de présenter ma formation aux lycéens en Terminal</p>
@@ -461,7 +510,7 @@
   <div class="projects-grid">
     
     <div class="project-card">
-      <img src="ccna.png" alt="">
+      <img src="img/ccna.png" alt="">
       <div class="content">
         <h3>Obtention du CCNA</h3>
         <p>Le CCNA (Cisco Certified Network Associate) est une certification Cisco reconnue internationalement. Il permet d'apprendre les bases des réseaux informatiques, le fonctionnement des routeurs, des commutateurs, ainsi que les principaux protocoles réseau utilisés dans les infrastructures professionnelles </p>
@@ -475,7 +524,7 @@
     </div>
 
     <div class="project-card">
-      <img src="toeic.png" alt="toeic">
+      <img src="img/toeic.png" alt="toeic">
       <div class="content">
         <h3>Obtention du TOEIC</h3>
         <p>Le TOEIC (Test of English for International Communication) est une certification en langue Anglaise très reconnu dans le monde des entreprises et des ingénieurs </p>
@@ -494,7 +543,7 @@
   <div class="projects-grid">
     
     <div class="project-card">
-      <img src="imt.jpg" alt="">
+      <img src="img/imt.jpg" alt="">
       <div class="content">
         <h3>IMT - Nord Europe</h3>
         <p>IMT Nord Paris est une école de l'institut Mines-Télécom et propose une formation d'Ingénieur spécialité – Informatique, Télécommunications et Réseaux
@@ -507,7 +556,7 @@
     </div>
 
     <div class="project-card">
-      <img src="sud.jpg" alt="">
+      <img src="img/sud.jpg" alt="">
       <div class="content">
         <h3>Télécom SudParis</h3>
         <p>Télécom SudParis forme des ingénieurs généralistes du numérique, avec des possibilités d’approfondissement dans des thématiques liées aux réseaux, télécoms, cybersécurité, etc.
@@ -519,7 +568,7 @@
       </div>
     </div>
      <div class="project-card">
-      <img src="insa.jpg" alt="forum">
+      <img src="img/insa.jpg" alt="forum">
       <div class="content">
         <h3>INSA de Lyon</h3>
         <p>L'INSA de Lyon propose une formation en Télécommunications, Service et Usages
@@ -533,7 +582,7 @@
   
   </div><br>
   <p class="intro">Vous pouvez retrouvez la decription de mon projet professionnel ici :<br>
-  <a href="projetHOARAU-vfinal.pdf" class="btn">Voir plus</a></p>
+  <a href="doc/projetHOARAU-vfinal.pdf" class="btn">Voir plus</a></p>
 </section>
     
 
@@ -545,19 +594,19 @@
             <p> Veuillez retrouver ci-dessous mon CV en format PDF.<br></p>
         </div>
     
-    
-    
         <!-- Insérer un PDF -->
-        <iframe src="cv.pdf" width="50%" height="600px"></iframe>
+        <iframe src="doc/cv.pdf" width="50%" height="600px"></iframe>
 
         <!-- Lien pour télécharger le CV -->
-        <p><a href="cv.pdf" download class="btn">Consulter mon CV</a></p>
+        <p><a href="doc/cv.pdf" download class="btn">Consulter mon CV</a></p>
         <br>
     </section>
     <!-- footer -->
     <footer>
         <p>&copy; 2025 HOARAU Thomas. Tous droits réservés.</p>
-        <footer>
+        <!-- <footer> -->
+                <p>📞0693 32 64 75<br>
+                    ✉️ t.hoarau@rt-iut.re</p>
             <a href="https://www.linkedin.com/in/thomas-hoarau-48237b341/" target="_blank" class="linkedin-icon"
                 aria-label="LinkedIn">
                 <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="currentColor">

@@ -4,649 +4,700 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
+    <title>Thomas Hoarau — Portfolio Réseaux & Télécoms</title>
+    <meta name="description" content="Portfolio de Thomas Hoarau, étudiant en 3e année de BUT Réseaux & Télécommunications et alternant chez Orange : expériences, compétences, projets et CV.">
+    <meta name="theme-color" content="#ff7900">
     <link rel="icon" href="img/logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://api.fontshare.com/v2/css?f[]=boska@400,500,700,501&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <link href="https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@800&f[]=boska@501&display=swap" rel="stylesheet">
-
 </head>
 
+<body>
 
     <!-- En-tête -->
     <header>
         <nav>
-            <div class="logo">Thomas.H</div>
-            <ul>
+            <a href="#hero" class="logo" onclick="openTab(event, 'hero')">Thomas<span>.</span>H</a>
+
+            <button class="nav-toggle" aria-label="Ouvrir le menu" aria-expanded="false" onclick="toggleMenu()">
+                <span></span><span></span><span></span>
+            </button>
+
+            <ul id="nav-links">
                 <li><a href="#hero" onclick="openTab(event, 'hero')">Accueil</a></li>
-                <li><a href="#about" onclick="openTab(event, 'about')">A propos</a></li>
-                <li><a href="#competences" onclick="openTab(event, 'competences')">Mes compétences</a></li>
-                <!-- <li><a href="#contact" onclick="openTab(event, 'contact')">Contact</a></li> -->
-                <li><a href="#projets" onclick="openTab(event, 'projets')">Mes projets</a></li>
-                <li><a href="#cv" onclick="openTab(event, 'cv')">Mon CV</a></li>
-                
+                <li><a href="#about" onclick="openTab(event, 'about')">À propos</a></li>
+                <li><a href="#experiences" onclick="openTab(event, 'experiences')">Expériences</a></li>
+                <li><a href="#competences" onclick="openTab(event, 'competences')">Compétences</a></li>
+                <li><a href="#projets" onclick="openTab(event, 'projets')">Projets</a></li>
+                <li><a href="#cv" onclick="openTab(event, 'cv')">CV</a></li>
             </ul>
         </nav>
     </header>
-<body>
-    <!-- Section Hero -->
-    <section id="hero" div class="hero tab-content">
-        <br><br><br><br>
-        <h1>Bienvenue sur mon Portfolio</h1>
-        <p>Je suis HOARAU Thomas, étudiant en deuxième année de BUT <br> <span class="rt">Réseaux &
-                Télécommunications</span> <br><br>
-            Veuillez retrouver sur ce site une revue de certains de mes projets réalisés dans le cadre de ma formation ainsi
-            qu'un aperçu de mes compétences.</p>
-        <br>
-        <a href="#projets" onclick="openTab(event, 'projets')" class="btn">Voir mes projets</a>
 
-    </section>
+    <main>
 
-    <!-- Section A propos -->
-    
-    <section id="about" class="tab-content hidden">
-        <br><br><br><br>
-        <div class="about-exp">
-            <h2><span class="rt">A propos de moi</span></h2>
+        <!-- Section Hero -->
+        <section id="hero" class="hero tab-content">
+            <div class="hero-inner">
+                <div class="hero-text">
+                    <p class="label">Portfolio — Réseaux & Télécoms</p>
+                    <h1>Thomas Hoarau</h1>
+                    <p class="hero-tagline">Étudiant en 3<sup>e</sup> année de BUT Réseaux & Télécommunications et <mark>alternant chez Orange</mark> en tant qu'exploitant réseau mobile.</p>
+                    <p class="hero-desc">Retrouvez sur ce site mon parcours, une sélection des projets réalisés pendant ma formation et un aperçu de mes compétences.</p>
+                    <p class="hero-goal"><span class="square"></span>Objectif : intégrer une école d'ingénieur en télécommunications</p>
 
-            <div class="about-card-container">
-                <div class="exp-card">
-                    <img src="img/moi.jpg" alt="about">
+                    <div class="hero-actions">
+                        <a href="#projets" onclick="openTab(event, 'projets')" class="btn">Voir mes projets</a>
+                        <a href="#experiences" onclick="openTab(event, 'experiences')" class="btn btn-ghost">Mon parcours</a>
+                    </div>
+
+                    <div class="socials">
+                        <a href="https://www.linkedin.com/in/thomas-hoarau-48237b341/" target="_blank" rel="noopener" aria-label="LinkedIn">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.76 0-5 2.24-5 5v14c0 2.76 2.24 5 5 5h14c2.76 0 5-2.24 5-5v-14c0-2.76-2.24-5-5-5zm-11.75 20h-3v-11h3v11zm-1.5-12.27c-.96 0-1.73-.79-1.73-1.73 0-.95.77-1.73 1.73-1.73s1.73.78 1.73 1.73c0 .94-.77 1.73-1.73 1.73zm13.25 12.27h-3v-5.6c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.94v5.7h-3v-11h2.88v1.5h.04c.4-.76 1.36-1.56 2.8-1.56 3 0 3.55 1.98 3.55 4.56v6.5z" /></svg>
+                            LinkedIn
+                        </a>
+                        <a href="https://github.com/Thomas-hru" target="_blank" rel="noopener" aria-label="GitHub">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" /></svg>
+                            GitHub
+                        </a>
+                        <a href="mailto:t.hoarau@rt-iut.re" aria-label="E-mail">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2" /><path d="m22 6-10 7L2 6" /></svg>
+                            E-mail
+                        </a>
+                    </div>
                 </div>
 
-                <section style="display: flex; flex-direction: column; gap: 2rem; margin: 0 auto;">
-                    <p>Tout d’abord, je suis HOARAU Thomas, j’ai actuellement 20 ans et je suis étudiant <br>en deuxième
-                        année de <b>BUT - Réseaux & Télécom</b> à l’IUT de La Réunion.
-                        <br>Sérieux et discipliné, je suis profondément investi dans ce que j’entreprend.
-                    </p>
-
-                    <p>Vous retrouverez mon parcours et mon experience sur mon CV :</p>
-                    <a href="#cv" onclick="openTab(event, 'cv')" class="btn">Voir mon CV</a>
-                </section>
-
-            </div>
-
-            <br>
-            
-        </div>
-
-        <!-- Section Centre d'Inrérets-->
-        <div id="about-exp">
-            <h2><span class="rt">Mes Centres d’intérêt</span></h2>
-            <p class="intro">En dehors de mes études et projets en réseaux & télécommunications, j’aime explorer ces
-                domaines :</p><br>
-
-            <div class="interests-grid">
-                <div class="interest-card">
-                    <div class="icon">⚽</div>
-                    <h3>Sport </h3>
-                    <p>Passionné de football et de musculation, j’aime me dépasser mais aussi travailler en équipe.</p>
+                <div class="hero-photo">
+                    <img src="img/avatar.jpg" alt="Photo de Thomas Hoarau">
                 </div>
-
-                <div class="interest-card">
-                    <div class="icon">🎶</div>
-                    <h3>Musique</h3>
-                    <p>Amoureux de la musique, je passe beaucoup de temps à en écouter et parfois à en faire.</p>
-                </div>
-
-                <div class="interest-card">
-                    <div class="icon">📘</div>
-                    <h3>Apprentissage </h3>
-                    <p>L'apprentissage est quelque chose dont j'accorde une certaine importance.</p>
-                </div>
-
-                <div class="interest-card">
-                    <div class="icon">✈️</div>
-                    <h3>Voyages & Découverte</h3>
-                    <p>Découvrir de nouvelles cultures, paysages et modes de vie m’inspire beaucoup.</p>
-                </div>
-
-                <div class="interest-card">
-                    <div class="icon">👔</div>
-                    <h3>Mode & Fashion</h3>
-                    <p>Fortement inspiré par le mouvement fashion, j'acorde une attention particulière à la mode et aux
-                        sneackers.</p>
-                </div>
-
-            </div>
-        </div>
-        <br><br>
-    </section>
-
-
-    <!-- Section Compétences -->
-    <section id="competences" class="tab-content hidden">
-        <br><br><br><br>
-        <h4><span class="rt">MES COMPÉTENCES</span></h4><br>
-
-        <div class="competences-section">
-            <h2 class="section-title">Compétences Techniques</h2>
-
-            <div class="competence-flex">
-
-            <div class="competences-grid">
-                <p>Réseau</p>
-                <div class="competence-item">
-                    <div class="competence-title">Configuration Equipements Cisco</div>
-                    <div class="competence-details">Routeurs, Switchs</div>
-                </div>
-                <div class="competence-item">
-                    <div class="competence-title">Services Réseaux</div>
-                    <div class="competence-details">DNS, DHCP, SSH</div>
-                </div>
-                <div class="competence-item">
-                    <div class="competence-title">Protocole réseau</div>
-                    <div class="competence-details">VLAN, FHRP, Etherchannel...</div>
-                </div>
-                <div class="competence-item">
-                    <div class="competence-title">Protocole de routage</div>
-                    <div class="competence-details">OSPF, RIP, EIGRP</div>
-                </div>
-                <div class="competence-item">
-                    <div class="competence-title">Sécurité</div>
-                    <div class="competence-details">Pare-Feu Stormshield, ACL</div>
-                </div>
-            </div>
-
-            <div class ="competences-grid">
-                <p>Système / Informatique </p>
-                
-                <div class="competence-item">
-                    <div class="competence-title">Administration Systèmes</div>
-                    <div class="competence-details">Linux/Unix, Active Directory</div>
-                </div>
-
-                <div class="competence-item">
-                    <div class="competence-title">Virtualisation</div>
-                    <div class="competence-details">Hyperviseur, Cluster</div>
-                </div>
-                <div class="competence-item">
-                    <div class="competence-title">DevOps</div>
-                    <div class="competence-details">Docker, Git, CI-CD</div>
-                </div>
-                <div class="competence-item">
-                    <div class="competence-title">Scripting</div>
-                    <div class="competence-details">Powershell, bash</div>
-                </div>
-                <div class="competence-item">
-                    <div class="competence-title">Développement Web</div>
-                    <div class="competence-details">HTML, CSS, JavaScript</div>
-                </div>
-                
-            </div>
-
-            <div class="competences-grid">
-            <p>Telecom'</p>
-
-                <div class="competence-item">
-                    <div class="competence-title">Technologies d'Accès</div>
-                    <div class="competence-details">FTTx, xDSL</div>
-                </div>
-                <div class="competence-item">
-                    <div class="competence-title">Réseaux d'opérateurs</div>
-                    <div class="competence-details">BGP, MPLS, VPN</div>
-                </div>
-                
-                <div class="competence-item">
-                    <div class="competence-title">Notions réseau mobile</div>
-                    <div class="competence-details">GSM, 3G, 4G, 5G</div>
-                </div>
-                <div class="competence-item">
-                    <div class="competence-title">Notion en radio & transmissions</div>
-                    <div class="competence-details">FH, ondes éléctromagnétique</div>
-                </div>
-                <div class="competence-item">
-                    <div class="competence-title">Soudure & Mesure Optique</div>
-                    <div class="competence-details">Soudeuse, Reflectomètre, Photomètre</div>
-                </div>
-                <div class="competence-item">
-                    <div class="competence-title">VoIP</div>
-                    <div class="competence-details">ToIP, Asterisk, QoS</div>
-                </div>
-            </div>
-            </div>
-        </div>
-
-        <div class="competences-section">
-            <h2 class="section-title">Compétences Transversales</h2>
-            <div class="competences-grid">
-                <div class="competence-item">
-                    <div class="competence-title">Anglais</div>
-                    <div class="competence-details">Capacité professionnelle / Niveau avancé</div>
-                </div>
-                <div class="competence-item">
-                    <div class="competence-title">Soft Skills</div>
-                    <div class="competence-details">Autonomie, communication, gestion du stress, esprit d'équipe</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-
-    <!-- Section Contact -->
-    <!-- <section id="contact-overall" class="contact-overall">
-        <section id="contact" class="tab-content hidden">
-            <br><br><br>
-            <div class="contact_1">
-                <h1>Contact</h1>
-                <p>📞0693 32 64 75<br>
-                    ✉️ t.hoarau@rt-iut.re<br><br>
-                    Vous pouvez également remplir ce formulaire pour toutes demandes</p>
-                <form>
-                    <label for="name">Nom :</label>
-                    <input type="text" id="name" name="name" required>
-
-                    <label for="email">Email :</label>
-                    <input type="email" id="email" name="email" required>
-                    <br />
-
-                    <label for="message">Message :</label>
-                    <textarea id="message" name="message" rows="5" required></textarea>
-
-                    <button class="btn">Envoyer</button>
-                </form>
             </div>
         </section>
-    </section> -->
 
-
-    <!-- -----------Projet--------------------- -->
-    <section id="projets" class="tab-content hidden">
-  <h2>Mes projets académique</h2>
-  <p class="intro">Voici quelques-uns des projets académique que j’ai pu réalisés dans le cadre de certains Projet de mon parcours en Réseaux & Télécommunications.</p>
-
-  <div class="projects-grid">
-    
-
-    <div class="project-card">
-      <img src="img/stormshield.webp" alt="stormshield">
-      <div class="content">
-        <h3>Réseau Sécurisé</h3>
-        <p>Sécurisation d'un réseau avec Pare-Feu Stormshiekd : Mis en place de règles de filtrage/NAT, DMZ et LAN</p>
-        <div class="tags">
-          <span>Stormshield</span><span>Firewall</span><span>NAT</span>
-        </div>
-        <a href="doc/401.pdf" class="btn">Voir plus</a>
-      </div>
-    </div>
-
-    <div class="project-card">
-      <img src="img/410.png" alt="MPLS">
-      <div class="content">
-        <h3>VPN MPLS</h3>
-        <p>Création d'un mini-réseau d'opérateur et mis en place d'un lien VPN MPLS avec la manipulation de BGP, MP-BGP, IGP... Sur des routeurs Cisco physique</p>
-        <div class="tags">
-          <span>MPLS</span><span>VPN</span><span>Cisco</span>
-        </div>
-        <a href="doc/mpls.pdf" class="btn">Voir plus</a>
-      </div>
-    </div>
-
-    <div class="project-card">
-      <img src="img/tp2410.png" alt="BGP">
-      <div class="content">
-        <h3>Manipulation BGP</h3>
-        <p>Création d'un mini-réseau d'opérateur et manipulatoon de BGP lors de la mis en place d'une relation de peering et de transit avec un autre opérateur simuler par une autre équipe</p>
-        <div class="tags">
-          <span>BGP</span><span>Peering</span><span>Transit</span>
-        </div>
-        <a href="doc/tp2410.pdf" class="btn">Voir plus</a>
-      </div>
-    </div>
-
-    <div class="project-card">
-      <img src="img/projet.png" alt="projet">
-      <div class="content">
-        <h3>Infrastructure Télécom' 4G/5G</h3>
-        <p>Reflection sur la conception d'une infrastructure de télécommunications de réseau mobile 4G/5G</p>
-        <div class="tags">
-          <span>Télécom</span><span>4G</span><span>5G</span><span>Antenne</span>
-        </div>
-        <a href="doc/projet.pdf" class="btn">Voir plus</a>
-      </div>
-    </div>
-
-    <div class="project-card">
-      <img src="img/409.png" alt="devops">
-      <div class="content">
-        <h3>Outils DevOps</h3>
-        <p>Introduction et utilisation de la contenerisation avec Docker, Git, GitLab et mis en place d'une pipeline CI/CD</p>
-        <div class="tags">
-          <span>Docker</span><span>Git</span><span>CI/CD</span>
-        </div>
-        <a href="doc/409.pdf" class="btn">Voir plus</a>
-      </div>
-    </div>
-
-    <div class="project-card">
-      <img src="img/317.png" alt="Virtualisation">
-      <div class="content">
-        <h3>Virtualisation Avancée</h3>
-        <p>Création et configuration d'un datacenter et d'un cluster entre plusieurs ESXi depuis une VM de gestion vCenter </p>
-        <div class="tags">
-          <span>ESXi</span><span>vCenter</span><span>Cluster</span><span>Datacenter</span>
-        </div>
-        <a href="doc/317.pdf" class="btn">Voir plus</a>
-      </div>
-    </div>
-
-    <div class="project-card">
-      <img src="img/103.png" alt="Audit Wi-Fi">
-      <div class="content">
-        <h3>Réalisation d'un audit Wi-Fi</h3>
-        <p>Réalisation d'un audits Wi-Fi professionnel pour mesurer la qualité du réseau Wi-Fi du département Réseaux & Télécom.</p>
-        <div class="tags">
-          <span>NetSpot</span><span>Canva</span>
-        </div>
-        <a href="doc/103.pdf" class="btn">Voir plus</a>
-      </div>
-    </div>
-
-     <div class="project-card">
-      <img src="img/301.png" alt="OSPF">
-      <div class="content">
-        <h3>Manipulation OSPF, routage Inter-Vlan et ACL</h3>
-        <p>Mis en place d'un LAB packet tracer complet mettant en place un réseau OSPF avec plusieurs zones, routage Inter-Vlan et règle de filtrage ACL.</p>
-        <div class="tags">
-          <span>OSPF</span><span>Inter-Vlan</span><span>ACL</span><span>PacketTracer</span>
-        </div>
-        <a href="doc/301.pdf" class="btn">Voir plus</a>
-      </div>
-    </div>
-
-    <div class="project-card">
-      <img src="img/306.png" alt="">
-      <div class="content">
-        <h3>Prise de mesure et soudure de fibre optique</h3>
-        <p>Utilisation de la réfléctométrie et de la photométrie pour effectuer des mesures sur une fibre optique.
-          Utilisation également d'une cliveuse et d'une soudeuse pour effectuer des soudures entre deux fibres optiques
-        </p>
-        <div class="tags">
-          <span>Réfléctométrie</span><span>Photométrie</span><span>Soudure</span>
-        </div>
-        <a href="doc/306.pdf" class="btn">Voir plus</a>
-      </div>
-    </div>
-
-    <div class="project-card">
-      <img src="img/316.png" alt="VoIP">
-      <div class="content">
-        <h3>Mis en place d'un evironnement de VoIP</h3>
-        <p>Mis en place d'un LAB packet tracer de VoIP permettant l'interconnexion et la communication entre deux réseaux différents à travers des Serveur TFTP/Call Manager Express </p>
-        <div class="tags">
-          <span>ToIP</span><span>PacketTracer</span>
-        </div>
-        <a href="doc/316.pdf" class="btn">Voir plus</a>
-      </div>
-    </div>
-
-    <div class="project-card">
-      <img src="img/antenne.png" alt="Antenne">
-      <div class="content">
-        <h3>Mis en place de dispositif de Télécommunications</h3>
-        <p>Mise en place d'antennes dans le but de capter et analyser des signaux tel que la TNT, la radio FM ou encore les signaux ADS-B...</p>
-        <div class="tags">
-          <span>Antennes</span><span>Radio</span>
-        </div>
-        <a href="doc/304.pdf" class="btn">Voir plus</a>
-      </div>
-    </div>
-
-    <div class="project-card">
-      <img src="img/304-2.webp" alt="AD">
-      <div class="content">
-        <h3>Mis en place d'un Windows Active Directory</h3>
-        <p>Mise en place d'un contrôleur de domaine Active Directory sous Windows Server 2022, conception et organisation d'un annuiare et déploiement de GPO</p>
-        <div class="tags">
-          <span>AD</span><span>Windows</span>
-        </div>
-        <a href="doc/304-2.pdf" class="btn">Voir plus</a>
-      </div>
-    </div>
-
-    <div class="project-card">
-      <img src="img/reseau.png" alt="Réseau">
-      <div class="content">
-        <h3>Création d'une topologie réseau et déploiement de services</h3>
-        <p>Mise en place d'une topologie réseau en physique fonctionnel avec le déploiement de service (Samba, Moodle & DHCP)</p>
-        <div class="tags">
-          <span>Windows/Linux</span><span>Cisco</span><span>Services réseaux</span>
-        </div>
-        <a href="doc/204.pdf" class="btn">Voir plus</a>
-      </div>
-    </div>
-
-    <div class="project-card">
-      <img src="img/302.png" alt="Web">
-      <div class="content">
-        <h3>Création d'une application Web</h3>
-        <p>Mise en place d'une application Web de messagerie permettant l'échange de messages entre plusieurs utilisateurs ayant un compte.
-        </p>
-        <div class="tags">
-          <span>CSS</span><span>TypeScript</span><span>WebSocket</span>
-        </div>
-        <a href="doc/302.pdf" class="btn">Voir plus</a>
-      </div>
-    </div>
-
-
-    <div class="project-card">
-      <img src="img/303.png" alt="">
-      <div class="content">
-        <h3>Conception d'un résau informatique adapté au multimédia</h3>
-        <p>Conception entière d'un réseau informatique pour une PME avec solution multimédia (SAN, FireWall, VPN...) et réalisation d'un PoC avec point d'accés Wi-Fi, portail captif, servuer de streaming...
-        </p>
-        <div class="tags">
-          <span>Multimédia</span><span>Réseau</span><span>Sécurité</span>
-        </div>
-        <a href="doc/303.pdf" class="btn">Voir plus</a>
-      </div>
-    </div>
-
-        <div class="project-card">
-            <img src="img/PI.png" alt="Projet Raspberry Pi">
-            <div class="content">
-                <h3>Initiation aux réseaux informatiques</h3>
-                <p>Configuration d’un Raspberry Pi pour piloter des LEDs et capteurs à distance via SSH et scripts Python.</p>
-                <div class="tags">
-                <span>Linux</span><span>SSH</span><span>Python</span><span>Raspberry Pi</span>
+        <!-- Section A propos -->
+        <section id="about" class="tab-content hidden">
+            <div class="container">
+                <div class="section-head">
+                    <span class="section-num">01</span>
+                    <h2>À propos de moi</h2>
                 </div>
-                <a href="doc/102.pdf" class="btn">Voir plus</a>
-            </div>
-        </div>
 
-    <div class="project-card">
-            <img src="img/303-2.png" alt="DNS">
-            <div class="content">
-                <h3>Déploiement d'un serveur DNS sur Linux</h3>
-                <p>Installation et configuration d'un serveur DNS sur Linux en utilsant Bind9.</p>
-                <div class="tags">
-                <span>Linux</span><span>DNS</span><span>Bind9</span>
+                <div class="about-card">
+                    <img src="img/moi.jpg" alt="Thomas Hoarau lors de la journée portes ouvertes de l'IUT">
+
+                    <div class="about-text">
+                        <p>Je suis Thomas Hoarau, j'ai 20 ans et je suis étudiant en troisième année de
+                            <b>BUT Réseaux & Télécommunications</b> (parcours Réseaux d'Opérateurs et Multimédia) à l'IUT de La Réunion.</p>
+                        <p>Je suis également alternant chez <b>Orange</b>, en tant qu'exploitant sur le réseau mobile.</p>
+                        <p>Motivé et sérieux, je cherche toujours à m'améliorer et à acquérir de nouvelles compétences.</p>
+                        <div class="about-actions">
+                            <a href="#experiences" onclick="openTab(event, 'experiences')" class="btn">Mon parcours</a>
+                            <a href="#cv" onclick="openTab(event, 'cv')" class="btn btn-ghost">Voir mon CV</a>
+                        </div>
+                    </div>
                 </div>
-                <a href="doc/303-2.pdf" class="btn">Voir plus</a>
+
+                <!-- Centres d'intérêt -->
+                <div class="section-head">
+                    <span class="section-num">02</span>
+                    <h2>Mes centres d'intérêt</h2>
+                </div>
+                <p class="intro">En dehors de mes études et de mes projets en réseaux & télécommunications, j'aime explorer ces domaines :</p>
+
+                <div class="interests-grid">
+                    <div class="interest-card">
+                        <h3>Sport</h3>
+                        <p>Passionné de football et de musculation, j'aime me dépasser mais aussi travailler en équipe.</p>
+                    </div>
+                    <div class="interest-card">
+                        <h3>Musique</h3>
+                        <p>Amoureux de la musique, je passe beaucoup de temps à en écouter et parfois à en faire.</p>
+                    </div>
+                    <div class="interest-card">
+                        <h3>Cinéma</h3>
+                        <p>Les films et les séries font partie de mes passe-temps favoris.</p>
+                    </div>
+                    <div class="interest-card">
+                        <h3>Mode</h3>
+                        <p>Fortement inspiré par l'univers de la mode, j'accorde une attention particulière aux vêtements et aux sneakers.</p>
+                    </div>
+                    <div class="interest-card">
+                        <h3>Voyages & découverte</h3>
+                        <p>Découvrir de nouvelles cultures, de nouveaux paysages et modes de vie m'inspire beaucoup.</p>
+                    </div>
+                    <div class="interest-card">
+                        <h3>Apprentissage</h3>
+                        <p>Apprendre de nouvelles choses est quelque chose à laquelle j'accorde beaucoup d'importance.</p>
+                    </div>
+                </div>
             </div>
-        </div>
-  </div>
-  <br>
-  <br>
-<!-- </section>
+        </section>
 
-<section id="projets"> -->
-  <h2>Mes projets bénévoles</h2>
-  <p class="intro">Voici quelques-uns des projets que j’ai réalisés en dehors du cadre de ma formation.</p>
+        <!-- Section Expériences -->
+        <section id="experiences" class="tab-content hidden">
+            <div class="container">
+                <div class="section-head">
+                    <span class="section-num">01</span>
+                    <h2>Expériences</h2>
+                </div>
 
-  <div class="projects-grid">
-    
-    <div class="project-card">
-      <img src="img/jpo.jpg" alt="jpo">
-      <div class="content">
-        <h3>Journée Portes Ouvertes 2025</h3>
-        <p>Présentation du BUT - Réseaux & Télécommunications lors de la journée portes ouvertes de l'IUT, interactions et échanges avec les futurs étudiants en recherche d'une formation post-bac </p>
-        <div class="tags">
-          <span>JPO</span><span>R&T</span><span>2025</span>
-        </div>
-        
-      </div>
-    </div>
+                <ol class="timeline">
+                    <li class="timeline-item current">
+                        <p class="timeline-date">Sept. 2026 — aujourd'hui</p>
+                        <div class="timeline-content">
+                            <h3>Exploitant réseau mobile</h3>
+                            <p class="timeline-org">Orange · Alternance</p>
+                            <p>Développement, supervision et support sur le réseau mobile.</p>
+                        </div>
+                    </li>
+                    <li class="timeline-item">
+                        <p class="timeline-date">Avr. — juin 2026</p>
+                        <div class="timeline-content">
+                            <h3>Technicien informatique</h3>
+                            <p class="timeline-org">Fondation Père Favron · Stage</p>
+                            <p>Modernisation du réseau, déploiement Wi-Fi…</p>
+                        </div>
+                    </li>
+                    <li class="timeline-item">
+                        <p class="timeline-date">2025</p>
+                        <div class="timeline-content">
+                            <h3>Bénévole</h3>
+                            <p class="timeline-org">IUT de La Réunion · Lycée Jean Joly</p>
+                            <p>Présentation du BUT R&T lors de la journée portes ouvertes de l'IUT et du forum des anciens élèves du lycée Jean Joly.</p>
+                        </div>
+                    </li>
+                </ol>
 
-    <div class="project-card">
-      <img src="img/forum.jpg" alt="forum">
-      <div class="content">
-        <h3>Forum des anciens élèves 2025</h3>
-        <p>Participation au forum des anciens élève 2025 de Lycée Jean Joly afin de présenter ma formation aux lycéens en Terminal</p>
-        <div class="tags">
-          <span>Forum</span><span>Jean Joly</span><span>2025</span>
-        </div>
-        
-      </div>
-    </div>
+                <div class="section-head">
+                    <span class="section-num">02</span>
+                    <h2>Formation</h2>
+                </div>
 
-  
-  </div>
-  <br>
-<h2>Mes projets personnels</h2>
-  <p class="intro">Voici certains projets personnel que je souhaite réaliser durant ma deuxième et troisième année de BUT</p>
+                <ol class="timeline">
+                    <li class="timeline-item current">
+                        <p class="timeline-date">2024 — 2027</p>
+                        <div class="timeline-content">
+                            <h3>BUT Réseaux & Télécommunications</h3>
+                            <p class="timeline-org">IUT de La Réunion · Terre Sainte, Saint-Pierre</p>
+                            <p>En cours (3<sup>e</sup> année), parcours Réseaux d'Opérateurs et Multimédia.</p>
+                        </div>
+                    </li>
+                    <li class="timeline-item">
+                        <p class="timeline-date">2024</p>
+                        <div class="timeline-content">
+                            <h3>Bac STI2D, mention bien</h3>
+                            <p class="timeline-org">Lycée Jean Joly · La Rivière Saint-Louis</p>
+                            <p>Spécialité Systèmes d'Information et Numérique.</p>
+                        </div>
+                    </li>
+                </ol>
 
-  <div class="projects-grid">
-    
-    <div class="project-card">
-      <img src="img/ccna.png" alt="">
-      <div class="content">
-        <h3>Obtention du CCNA</h3>
-        <p>Le CCNA (Cisco Certified Network Associate) est une certification Cisco reconnue internationalement. Il permet d'apprendre les bases des réseaux informatiques, le fonctionnement des routeurs, des commutateurs, ainsi que les principaux protocoles réseau utilisés dans les infrastructures professionnelles </p>
-        <div class="tags">
-          <span>CCNA</span><span>Cisco</span><span>
-            Routing & Switching
-          </span>
-        </div>
-        
-      </div>
-    </div>
+                <div class="section-head">
+                    <span class="section-num">03</span>
+                    <h2>Certifications</h2>
+                </div>
 
-    <div class="project-card">
-      <img src="img/toeic.png" alt="toeic">
-      <div class="content">
-        <h3>Obtention du TOEIC</h3>
-        <p>Le TOEIC (Test of English for International Communication) est une certification en langue Anglaise très reconnu dans le monde des entreprises et des ingénieurs </p>
-        <div class="tags">
-          <span>English</span><span>Internationnal</span>
-        </div>
-        
-      </div>
-    </div>
-  
-  </div><br>
+                <div class="cert-list">
+                    <div class="cert">
+                        <p class="cert-year">2024</p>
+                        <p class="cert-name">MOOC de l'ANSSI — Cybersécurité</p>
+                    </div>
+                    <div class="cert">
+                        <p class="cert-year">2022</p>
+                        <p class="cert-name">Certification en langue — Allemand</p>
+                    </div>
+                    <div class="cert">
+                        <p class="cert-year">—</p>
+                        <p class="cert-name">Certification PIX</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-  <h2>Mon projet professionnel</h2>
-  <p class="intro">Aprés mon diplôme du BUT - Réseaux & Télécom, j'aimerais m'orienter vers une école qui propose une formation d'ingénieur dans le domaine des télécommunications comme celles-ci :</p>
+        <!-- Section Compétences -->
+        <section id="competences" class="tab-content hidden">
+            <div class="container">
+                <div class="section-head">
+                    <span class="section-num">01</span>
+                    <h2>Compétences techniques</h2>
+                </div>
 
-  <div class="projects-grid">
-    
-    <div class="project-card">
-      <img src="img/imt.jpg" alt="">
-      <div class="content">
-        <h3>IMT - Nord Europe</h3>
-        <p>IMT Nord Paris est une école de l'institut Mines-Télécom et propose une formation d'Ingénieur spécialité – Informatique, Télécommunications et Réseaux
-          <br>Compétences en mathématiques, électronique / réseaux / télécom  </p>
-        <div class="tags">
-          <span>Admissions sur titre BUT3</span><span>Lille</span>
-        </div>
-        
-      </div>
-    </div>
+                <div class="skills-grid">
+                    <div class="skill-block">
+                        <h3>Réseau</h3>
+                        <div class="skill-row"><span class="skill-name">Configuration d'équipements</span><span class="skill-detail">Routeurs, switchs, pare-feu (Cisco)</span></div>
+                        <div class="skill-row"><span class="skill-name">Services réseaux</span><span class="skill-detail">DNS, DHCP, SSH</span></div>
+                        <div class="skill-row"><span class="skill-name">Protocoles réseau</span><span class="skill-detail">TCP/IP, modèle OSI, IPv4, IPv6, VLAN, FHRP, EtherChannel</span></div>
+                        <div class="skill-row"><span class="skill-name">Protocoles de routage</span><span class="skill-detail">OSPF, RIP, EIGRP</span></div>
+                        <div class="skill-row"><span class="skill-name">Sécurité</span><span class="skill-detail">Filtrage pare-feu (Stormshield), ACL, haute disponibilité</span></div>
+                    </div>
 
-    <div class="project-card">
-      <img src="img/sud.jpg" alt="">
-      <div class="content">
-        <h3>Télécom SudParis</h3>
-        <p>Télécom SudParis forme des ingénieurs généralistes du numérique, avec des possibilités d’approfondissement dans des thématiques liées aux réseaux, télécoms, cybersécurité, etc.
-          <br>Profil technique solide réseaux, télécoms, informatique embarquée, anglais </p>
-        <div class="tags">
-          <span>Admissions sur titre BUT3</span><span>Ile-de-France</span>
-        </div>
-        
-      </div>
-    </div>
-     <div class="project-card">
-      <img src="img/insa.jpg" alt="forum">
-      <div class="content">
-        <h3>INSA de Lyon</h3>
-        <p>L'INSA de Lyon propose une formation en Télécommunications, Service et Usages
-          <br>Profil technique solide réseaux, télécoms, informatique.  </p>
-        <div class="tags">
-          <span>Admissions sur titre BUT3</span><span>Lyon</span>
-        </div>
-        
-      </div>
-    </div>
-  
-  </div><br>
-  <p class="intro">Vous pouvez retrouvez la decription de mon projet professionnel ici :<br>
-  <a href="doc/projetHOARAU-vfinal.pdf" class="btn">Voir plus</a></p>
-</section>
-    
+                    <div class="skill-block">
+                        <h3>Télécoms</h3>
+                        <div class="skill-row"><span class="skill-name">Réseaux mobiles</span><span class="skill-detail">3G, 4G, 5G</span></div>
+                        <div class="skill-row"><span class="skill-name">Technologies d'accès</span><span class="skill-detail">FTTx, xDSL</span></div>
+                        <div class="skill-row"><span class="skill-name">Réseaux d'opérateurs</span><span class="skill-detail">MPLS, BGP, VPN</span></div>
+                        <div class="skill-row"><span class="skill-name">Radio & transmissions</span><span class="skill-detail">Faisceaux hertziens, antennes</span></div>
+                        <div class="skill-row"><span class="skill-name">Fibre optique</span><span class="skill-detail">Soudure, réflectométrie, photométrie</span></div>
+                        <div class="skill-row"><span class="skill-name">VoIP</span><span class="skill-detail">ToIP, Asterisk, QoS</span></div>
+                    </div>
+
+                    <div class="skill-block">
+                        <h3>Systèmes</h3>
+                        <div class="skill-row"><span class="skill-name">Administration systèmes</span><span class="skill-detail">Linux/Unix, Active Directory</span></div>
+                        <div class="skill-row"><span class="skill-name">Virtualisation</span><span class="skill-detail">Proxmox, ESXi, vCenter</span></div>
+                        <div class="skill-row"><span class="skill-name">Conteneurisation</span><span class="skill-detail">Docker, Docker Swarm</span></div>
+                        <div class="skill-row"><span class="skill-name">DevOps</span><span class="skill-detail">Git, GitHub, GitLab CI/CD, Vagrant</span></div>
+                        <div class="skill-row"><span class="skill-name">Supervision</span><span class="skill-detail">Grafana, intranet</span></div>
+                        <div class="skill-row"><span class="skill-name">Bases de données</span><span class="skill-detail">MySQL, phpMyAdmin</span></div>
+                        <div class="skill-row"><span class="skill-name">Scripting</span><span class="skill-detail">PowerShell, Bash</span></div>
+                    </div>
+
+                    <div class="skill-block">
+                        <h3>Programmation & IA</h3>
+                        <div class="skill-row"><span class="skill-name">Développement web</span><span class="skill-detail">HTML, CSS, JavaScript, TypeScript, PHP</span></div>
+                        <div class="skill-row"><span class="skill-name">Automatisation & agents IA</span><span class="skill-detail">n8n, Power Automate</span></div>
+                    </div>
+                </div>
+
+                <div class="section-head">
+                    <span class="section-num">02</span>
+                    <h2>Compétences transversales</h2>
+                </div>
+
+                <div class="soft-grid">
+                    <div class="soft">
+                        <h3>Communication</h3>
+                        <p>De nature sociable, je n'ai aucun mal à aller vers les autres et à communiquer.</p>
+                    </div>
+                    <div class="soft">
+                        <h3>Autonomie & organisation</h3>
+                        <p>J'ai l'habitude de prendre les devants et de travailler de manière autonome.</p>
+                    </div>
+                    <div class="soft">
+                        <h3>Gestion du stress</h3>
+                        <p>Face à une situation compliquée, je sais faire preuve de lucidité et garder mon calme.</p>
+                    </div>
+                    <div class="soft">
+                        <h3>Esprit d'équipe</h3>
+                        <p>Habitué au travail de groupe, la collaboration n'est pas un problème pour moi.</p>
+                    </div>
+                </div>
+
+                <div class="languages">
+                    <h3>Langues</h3>
+                    <div class="skill-row"><span class="skill-name">Français</span><span class="skill-detail">Langue maternelle</span></div>
+                    <div class="skill-row"><span class="skill-name">Anglais</span><span class="skill-detail">Niveau avancé</span></div>
+                    <div class="skill-row"><span class="skill-name">Allemand</span><span class="skill-detail">Niveau B1</span></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- -----------Projets--------------------- -->
+        <section id="projets" class="tab-content hidden">
+            <div class="container">
+
+                <div class="section-head">
+                    <span class="section-num">01</span>
+                    <h2>Projets académiques</h2>
+                </div>
+                <p class="intro">Voici quelques-uns des projets que j'ai réalisés dans le cadre de ma formation en Réseaux & Télécommunications.</p>
+
+                <div class="filters">
+                    <button class="filter active" onclick="filterProjects(event, 'all')">Tous</button>
+                    <button class="filter" onclick="filterProjects(event, 'reseau')">Réseau</button>
+                    <button class="filter" onclick="filterProjects(event, 'systeme')">Système</button>
+                    <button class="filter" onclick="filterProjects(event, 'telecom')">Télécoms</button>
+                </div>
+
+                <div class="projects-grid" id="academic-projects">
+
+                    <div class="project-card" data-cat="reseau">
+                        <div class="card-media contain"><img src="img/stormshield.webp" alt="Logo Stormshield" loading="lazy"></div>
+                        <div class="content">
+                            <h3>Réseau sécurisé</h3>
+                            <p>Sécurisation d'un réseau avec un pare-feu Stormshield : mise en place de règles de filtrage et de NAT, d'une DMZ et d'un LAN.</p>
+                            <div class="tags"><span>Stormshield</span><span>Firewall</span><span>NAT</span></div>
+                            <a href="doc/401.pdf" target="_blank" rel="noopener" class="link-more">Voir le rapport</a>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-cat="telecom">
+                        <div class="card-media"><img src="img/410.png" alt="Baies de routeurs Cisco" loading="lazy"></div>
+                        <div class="content">
+                            <h3>VPN MPLS</h3>
+                            <p>Création d'un mini-réseau d'opérateur et mise en place d'un VPN MPLS (BGP, MP-BGP, IGP…) sur des routeurs Cisco physiques.</p>
+                            <div class="tags"><span>MPLS</span><span>VPN</span><span>Cisco</span></div>
+                            <a href="doc/mpls.pdf" target="_blank" rel="noopener" class="link-more">Voir le rapport</a>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-cat="telecom">
+                        <div class="card-media contain"><img src="img/tp2410.png" alt="Topologie BGP" loading="lazy"></div>
+                        <div class="content">
+                            <h3>Manipulation de BGP</h3>
+                            <p>Création d'un mini-réseau d'opérateur et mise en place de relations de peering et de transit BGP avec un autre opérateur, simulé par une autre équipe.</p>
+                            <div class="tags"><span>BGP</span><span>Peering</span><span>Transit</span></div>
+                            <a href="doc/tp2410.pdf" target="_blank" rel="noopener" class="link-more">Voir le rapport</a>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-cat="telecom">
+                        <div class="card-media"><img src="img/projet.png" alt="Antenne relais" loading="lazy"></div>
+                        <div class="content">
+                            <h3>Infrastructure télécom 4G/5G</h3>
+                            <p>Réflexion sur la conception d'une infrastructure de télécommunications pour un réseau mobile 4G/5G.</p>
+                            <div class="tags"><span>Télécom</span><span>4G</span><span>5G</span><span>Antenne</span></div>
+                            <a href="doc/projet.pdf" target="_blank" rel="noopener" class="link-more">Voir le rapport</a>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-cat="systeme">
+                        <div class="card-media contain"><img src="img/409.png" alt="Cycle DevOps" loading="lazy"></div>
+                        <div class="content">
+                            <h3>Outils DevOps</h3>
+                            <p>Introduction à la conteneurisation avec Docker, utilisation de Git et GitLab, et mise en place d'une pipeline CI/CD.</p>
+                            <div class="tags"><span>Docker</span><span>Git</span><span>CI/CD</span></div>
+                            <a href="doc/409.pdf" target="_blank" rel="noopener" class="link-more">Voir le rapport</a>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-cat="systeme">
+                        <div class="card-media contain"><img src="img/317.png" alt="Interface vCenter" loading="lazy"></div>
+                        <div class="content">
+                            <h3>Virtualisation avancée</h3>
+                            <p>Création et configuration d'un datacenter et d'un cluster de plusieurs ESXi depuis une VM de gestion vCenter.</p>
+                            <div class="tags"><span>ESXi</span><span>vCenter</span><span>Cluster</span><span>Datacenter</span></div>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-cat="telecom">
+                        <div class="card-media contain"><img src="img/103.png" alt="Icône Wi-Fi" loading="lazy"></div>
+                        <div class="content">
+                            <h3>Audit Wi-Fi</h3>
+                            <p>Réalisation d'un audit Wi-Fi professionnel pour mesurer la qualité du réseau Wi-Fi du département Réseaux & Télécoms.</p>
+                            <div class="tags"><span>NetSpot</span><span>Canva</span></div>
+                            <a href="doc/103.pdf" target="_blank" rel="noopener" class="link-more">Voir le rapport</a>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-cat="reseau">
+                        <div class="card-media contain"><img src="img/301.png" alt="Topologie OSPF" loading="lazy"></div>
+                        <div class="content">
+                            <h3>OSPF, routage inter-VLAN et ACL</h3>
+                            <p>Mise en place d'un lab Packet Tracer complet : réseau OSPF multizone, routage inter-VLAN et règles de filtrage ACL.</p>
+                            <div class="tags"><span>OSPF</span><span>Inter-VLAN</span><span>ACL</span><span>Packet Tracer</span></div>
+                            <a href="doc/301.pdf" target="_blank" rel="noopener" class="link-more">Voir le rapport</a>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-cat="telecom">
+                        <div class="card-media"><img src="img/306.png" alt="Soudeuse de fibre optique" loading="lazy"></div>
+                        <div class="content">
+                            <h3>Mesure et soudure de fibre optique</h3>
+                            <p>Mesures sur fibre optique par réflectométrie et photométrie, puis soudure de deux fibres à l'aide d'une cliveuse et d'une soudeuse.</p>
+                            <div class="tags"><span>Réflectométrie</span><span>Photométrie</span><span>Soudure</span></div>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-cat="telecom">
+                        <div class="card-media contain"><img src="img/316.png" alt="Illustration VoIP" loading="lazy"></div>
+                        <div class="content">
+                            <h3>Environnement VoIP</h3>
+                            <p>Mise en place d'un lab Packet Tracer de VoIP permettant la communication entre deux réseaux différents via des serveurs TFTP et Call Manager Express.</p>
+                            <div class="tags"><span>ToIP</span><span>Packet Tracer</span></div>
+                            <a href="doc/316.pdf" target="_blank" rel="noopener" class="link-more">Voir le rapport</a>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-cat="telecom">
+                        <div class="card-media"><img src="img/antenne.png" alt="Antenne installée en extérieur" loading="lazy"></div>
+                        <div class="content">
+                            <h3>Dispositifs de télécommunications</h3>
+                            <p>Installation d'antennes pour capter et analyser des signaux tels que la TNT, la radio FM ou encore les signaux ADS-B.</p>
+                            <div class="tags"><span>Antennes</span><span>Radio</span></div>
+                            <a href="doc/304.pdf" target="_blank" rel="noopener" class="link-more">Voir le rapport</a>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-cat="systeme">
+                        <div class="card-media contain"><img src="img/304-2.webp" alt="Logo Active Directory" loading="lazy"></div>
+                        <div class="content">
+                            <h3>Windows Active Directory</h3>
+                            <p>Mise en place d'un contrôleur de domaine Active Directory sous Windows Server 2022, conception et organisation d'un annuaire, et déploiement de GPO.</p>
+                            <div class="tags"><span>AD</span><span>Windows Server</span><span>GPO</span></div>
+                            <a href="doc/304-2.pdf" target="_blank" rel="noopener" class="link-more">Voir le rapport</a>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-cat="reseau">
+                        <div class="card-media"><img src="img/reseau.png" alt="Baie réseau câblée" loading="lazy"></div>
+                        <div class="content">
+                            <h3>Topologie réseau et services</h3>
+                            <p>Mise en place d'une topologie réseau physique fonctionnelle et déploiement de services (Samba, Moodle, DHCP).</p>
+                            <div class="tags"><span>Windows/Linux</span><span>Cisco</span><span>Services réseaux</span></div>
+                            <a href="doc/204.pdf" target="_blank" rel="noopener" class="link-more">Voir le rapport</a>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-cat="systeme">
+                        <div class="card-media"><img src="img/302.png" alt="Aperçu de l'application de messagerie" loading="lazy"></div>
+                        <div class="content">
+                            <h3>Application web de messagerie</h3>
+                            <p>Développement d'une application web de messagerie permettant à plusieurs utilisateurs disposant d'un compte d'échanger des messages.</p>
+                            <div class="tags"><span>CSS</span><span>TypeScript</span><span>WebSocket</span></div>
+                            <a href="doc/302.pdf" target="_blank" rel="noopener" class="link-more">Voir le rapport</a>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-cat="reseau">
+                        <div class="card-media contain"><img src="img/303.png" alt="Schéma d'architecture réseau" loading="lazy"></div>
+                        <div class="content">
+                            <h3>Réseau adapté au multimédia</h3>
+                            <p>Conception complète du réseau d'une PME avec solution multimédia (SAN, pare-feu, VPN…) et réalisation d'un PoC : point d'accès Wi-Fi, portail captif, serveur de streaming…</p>
+                            <div class="tags"><span>Multimédia</span><span>Réseau</span><span>Sécurité</span></div>
+                            <a href="doc/303.pdf" target="_blank" rel="noopener" class="link-more">Voir le rapport</a>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-cat="reseau">
+                        <div class="card-media"><img src="img/PI.png" alt="Raspberry Pi" loading="lazy"></div>
+                        <div class="content">
+                            <h3>Initiation aux réseaux informatiques</h3>
+                            <p>Configuration d'un Raspberry Pi pour piloter des LED et des capteurs à distance via SSH et des scripts Python.</p>
+                            <div class="tags"><span>Linux</span><span>SSH</span><span>Python</span><span>Raspberry Pi</span></div>
+                            <a href="doc/102.pdf" target="_blank" rel="noopener" class="link-more">Voir le rapport</a>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-cat="systeme">
+                        <div class="card-media contain"><img src="img/303-2.png" alt="Illustration DNS" loading="lazy"></div>
+                        <div class="content">
+                            <h3>Serveur DNS sous Linux</h3>
+                            <p>Installation et configuration d'un serveur DNS sous Linux avec Bind9.</p>
+                            <div class="tags"><span>Linux</span><span>DNS</span><span>Bind9</span></div>
+                            <a href="doc/303-2.pdf" target="_blank" rel="noopener" class="link-more">Voir le rapport</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Projets personnels -->
+                <div class="section-head">
+                    <span class="section-num">02</span>
+                    <h2>Projets personnels</h2>
+                </div>
+                <p class="intro">Des projets menés de mon côté, en dehors de la formation.</p>
+
+                <div class="projects-grid">
+                    <div class="project-card text-only">
+                        <div class="content">
+                            <p class="card-label">Web · E-commerce · <span class="wip">En cours</span></p>
+                            <h3>Boutique en ligne de vêtements</h3>
+                            <p>Création d'une boutique en ligne de vêtements (lekip.re), actuellement en cours de développement.</p>
+                            <div class="tags"><span>E-commerce</span><span>Web</span></div>
+                        </div>
+                    </div>
+
+                    <div class="project-card text-only">
+                        <div class="content">
+                            <p class="card-label">Automatisation · IA</p>
+                            <h3>Pipeline automatisée avec agents IA</h3>
+                            <p>Création d'une pipeline 100 % automatisée, pilotée par des agents IA, pour un projet personnel.</p>
+                            <div class="tags"><span>Automatisation</span><span>Agents IA</span></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Projets bénévoles -->
+                <div class="section-head">
+                    <span class="section-num">03</span>
+                    <h2>Projets bénévoles</h2>
+                </div>
+                <p class="intro">Voici quelques-uns des projets que j'ai réalisés en dehors du cadre de ma formation.</p>
+
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <div class="card-media"><img src="img/jpo.jpg" alt="Journée portes ouvertes de l'IUT" loading="lazy"></div>
+                        <div class="content">
+                            <h3>Journée portes ouvertes 2025</h3>
+                            <p>Présentation du BUT Réseaux & Télécommunications lors de la journée portes ouvertes de l'IUT : échanges avec de futurs étudiants à la recherche d'une formation post-bac.</p>
+                            <div class="tags"><span>JPO</span><span>R&T</span><span>2025</span></div>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="card-media"><img src="img/forum.jpg" alt="Forum des anciens élèves" loading="lazy"></div>
+                        <div class="content">
+                            <h3>Forum des anciens élèves 2025</h3>
+                            <p>Participation au forum des anciens élèves 2025 du lycée Jean Joly afin de présenter ma formation aux lycéens de terminale.</p>
+                            <div class="tags"><span>Forum</span><span>Jean Joly</span><span>2025</span></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Certifications visées -->
+                <div class="section-head">
+                    <span class="section-num">04</span>
+                    <h2>Certifications visées</h2>
+                </div>
+                <p class="intro">Les certifications que je souhaite obtenir d'ici la fin de mon BUT.</p>
+
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <div class="card-media contain"><img src="img/ccna.png" alt="Logo CCNA" loading="lazy"></div>
+                        <div class="content">
+                            <h3>CCNA</h3>
+                            <p>Le CCNA (Cisco Certified Network Associate) est une certification Cisco reconnue internationalement. Elle couvre les bases des réseaux informatiques, le fonctionnement des routeurs et des commutateurs, ainsi que les principaux protocoles utilisés dans les infrastructures professionnelles.</p>
+                            <div class="tags"><span>CCNA</span><span>Cisco</span><span>Routing & Switching</span></div>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="card-media contain"><img src="img/toeic.png" alt="Logo TOEIC" loading="lazy"></div>
+                        <div class="content">
+                            <h3>TOEIC</h3>
+                            <p>Le TOEIC (Test of English for International Communication) est une certification d'anglais très reconnue par les entreprises et les écoles d'ingénieurs.</p>
+                            <div class="tags"><span>Anglais</span><span>International</span></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Projet professionnel -->
+                <div class="section-head">
+                    <span class="section-num">05</span>
+                    <h2>Mon projet professionnel</h2>
+                </div>
+                <p class="intro">Après mon BUT Réseaux & Télécommunications, j'aimerais intégrer une école proposant une formation d'ingénieur dans le domaine des télécommunications, comme celles-ci :</p>
+
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <div class="card-media contain"><img src="img/imt.jpg" alt="Logo IMT Nord Europe" loading="lazy"></div>
+                        <div class="content">
+                            <h3>IMT Nord Europe</h3>
+                            <p>École de l'Institut Mines-Télécom proposant une formation d'ingénieur spécialité Informatique, Télécommunications et Réseaux.</p>
+                            <p class="requirements">Attendus : mathématiques, électronique, réseaux / télécoms.</p>
+                            <div class="tags"><span>Admission sur titre BUT3</span><span>Lille</span></div>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="card-media contain"><img src="img/sud.jpg" alt="Logo Télécom SudParis" loading="lazy"></div>
+                        <div class="content">
+                            <h3>Télécom SudParis</h3>
+                            <p>Forme des ingénieurs généralistes du numérique, avec des approfondissements possibles en réseaux, télécoms, cybersécurité, etc.</p>
+                            <p class="requirements">Attendus : solide profil technique en réseaux, télécoms, informatique embarquée et anglais.</p>
+                            <div class="tags"><span>Admission sur titre BUT3</span><span>Île-de-France</span></div>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="card-media contain"><img src="img/insa.jpg" alt="Logo INSA Lyon" loading="lazy"></div>
+                        <div class="content">
+                            <h3>INSA Lyon</h3>
+                            <p>Propose une formation d'ingénieur en Télécommunications, Services et Usages.</p>
+                            <p class="requirements">Attendus : solide profil technique en réseaux, télécoms et informatique.</p>
+                            <div class="tags"><span>Admission sur titre BUT3</span><span>Lyon</span></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pro-link">
+                    <p>Retrouvez la description complète de mon projet professionnel ici :</p>
+                    <a href="doc/projetHOARAU-vfinal.pdf" target="_blank" rel="noopener" class="btn">Voir mon projet professionnel</a>
+                </div>
+            </div>
+        </section>
 
         <!-- -------CV------------- -->
-    <section id="cv" class="tab-content hidden">
-        <div class="cv-content">
-            <br><br><br>
-            <h1><span class="rt" >Curriculum Vitae</span></h1>
-            <p> Veuillez retrouver ci-dessous mon CV en format PDF.<br></p>
-        </div>
-    
-        <!-- Insérer un PDF -->
-        <iframe src="doc/cv.pdf" width="50%" height="600px"></iframe>
+        <section id="cv" class="tab-content hidden">
+            <div class="container">
+                <div class="section-head">
+                    <span class="section-num">CV</span>
+                    <h2>Curriculum Vitae</h2>
+                </div>
+                <p class="intro">Retrouvez ci-dessous mon CV au format PDF.</p>
 
-        <!-- Lien pour télécharger le CV -->
-        <p><a href="doc/cv.pdf" download class="btn">Consulter mon CV</a></p>
-        <br>
-    </section>
+                <iframe class="cv-frame" src="doc/cv.pdf" title="CV de Thomas Hoarau"></iframe>
+
+                <div class="cv-actions">
+                    <a href="doc/cv.pdf" target="_blank" rel="noopener" class="btn">Ouvrir mon CV</a>
+                    <a href="doc/cv.pdf" download class="btn btn-ghost">Télécharger</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
     <!-- footer -->
     <footer>
-        <p>&copy; 2025 HOARAU Thomas. Tous droits réservés.</p>
-        <!-- <footer> -->
-                <p>📞0693 32 64 75<br>
-                    ✉️ t.hoarau@rt-iut.re</p>
-            <a href="https://www.linkedin.com/in/thomas-hoarau-48237b341/" target="_blank" class="linkedin-icon"
-                aria-label="LinkedIn">
-                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M19 0h-14c-2.76 0-5 2.24-5 5v14c0 2.76 2.24 5 5 5h14c2.76 
-            0 5-2.24 5-5v-14c0-2.76-2.24-5-5-5zm-11.75 
-             20h-3v-11h3v11zm-1.5-12.27c-.96 0-1.73-.79-1.73-1.73 
-             0-.95.77-1.73 1.73-1.73s1.73.78 1.73 
-             1.73c0 .94-.77 1.73-1.73 1.73zm13.25 
-             12.27h-3v-5.6c0-1.33-.03-3.04-1.85-3.04-1.85 
-             0-2.13 1.45-2.13 2.94v5.7h-3v-11h2.88v1.5h.04c.4-.76 
-             1.36-1.56 2.8-1.56 3 0 3.55 1.98 3.55 4.56v6.5z" />
-                </svg>
-            </a>
+        <div class="footer-inner">
+            <p class="footer-name">Thomas<span>.</span>H</p>
+            <div class="footer-links">
+                <a href="mailto:t.hoarau@rt-iut.re">t.hoarau@rt-iut.re</a>
+                <a href="https://www.linkedin.com/in/thomas-hoarau-48237b341/" target="_blank" rel="noopener">LinkedIn</a>
+                <a href="https://github.com/Thomas-hru" target="_blank" rel="noopener">GitHub</a>
+            </div>
+            <p class="footer-copy">&copy; <span id="year">2026</span> Thomas Hoarau</p>
+        </div>
+    </footer>
 
-            <a href="https://github.com/Thomas-hru" target="_blank" class="github-icon" aria-label="GitHub">
-              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
-              </svg>
-            </a>
+    <script>
+        // Affiche un onglet (section) et cache les autres
+        function showTab(tabName) {
+            let section = document.getElementById(tabName);
+            if (!section || !section.classList.contains("tab-content")) {
+                tabName = "hero";
+                section = document.getElementById("hero");
+            }
 
-        </footer>
+            // 1. On cache toutes les sections en ajoutant 'hidden'
+            document.querySelectorAll(".tab-content").forEach(s => s.classList.add("hidden"));
+
+            // 2. On affiche la section demandée en retirant 'hidden'
+            section.classList.remove("hidden");
+
+            // 3. Lien actif dans la navbar (y compris quand on clique sur un bouton dans la page)
+            document.querySelectorAll("nav ul li a").forEach(link => {
+                link.classList.toggle("active-link", link.getAttribute("href") === "#" + tabName);
+            });
+
+            closeMenu();
+            window.scrollTo({ top: 0 });
+        }
+
+        function openTab(event, tabName) {
+            event.preventDefault();
+            showTab(tabName);
+            // Met à jour l'adresse pour pouvoir partager un lien direct (ex : .../#projets)
+            history.replaceState(null, "", "#" + tabName);
+        }
+
+        // Menu mobile
+        function toggleMenu() {
+            const open = document.getElementById("nav-links").classList.toggle("open");
+            document.querySelector(".nav-toggle").setAttribute("aria-expanded", open);
+        }
+
+        function closeMenu() {
+            document.getElementById("nav-links").classList.remove("open");
+            document.querySelector(".nav-toggle").setAttribute("aria-expanded", false);
+        }
+
+        // Filtre des projets académiques par catégorie
+        function filterProjects(event, category) {
+            document.querySelectorAll(".filter").forEach(b => b.classList.remove("active"));
+            event.currentTarget.classList.add("active");
+
+            document.querySelectorAll("#academic-projects .project-card").forEach(card => {
+                card.classList.toggle("hidden", category !== "all" && card.dataset.cat !== category);
+            });
+        }
+
+        // Au chargement : ouvre l'onglet présent dans l'URL (#projets, #cv...)
+        showTab(location.hash.slice(1) || "hero");
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
 </body>
 
 </html>
-<script>
-    function openTab(event, tabName) {
-        event.preventDefault();
-
-        // 1. On cache toutes les sections en ajoutant 'hidden'
-        let contents = document.getElementsByClassName("tab-content");
-        for (let i = 0; i < contents.length; i++) {
-            contents[i].classList.add("hidden");
-        }
-
-        // 2. On affiche la section demandée en retirant 'hidden'
-        document.getElementById(tabName).classList.remove("hidden");
-
-        // 3. Gestion des liens actifs (visuel navbar)
-        let navLinks = document.querySelectorAll("nav ul li a");
-        navLinks.forEach(link => link.classList.remove("active-link"));
-        event.currentTarget.classList.add("active-link");
-    }
-</script>

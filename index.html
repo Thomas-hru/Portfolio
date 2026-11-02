@@ -301,7 +301,7 @@
 
                 <div class="section-head">
                     <span class="section-num">01</span>
-                    <h2>Projets académiques</h2>
+                    <h2>Mes projets</h2>
                 </div>
                 <p class="intro">Voici quelques-uns des projets que j'ai réalisés dans le cadre de ma formation en Réseaux & Télécommunications.</p>
 
@@ -310,9 +310,35 @@
                     <button class="filter" onclick="filterProjects(event, 'reseau')">Réseau</button>
                     <button class="filter" onclick="filterProjects(event, 'systeme')">Système</button>
                     <button class="filter" onclick="filterProjects(event, 'telecom')">Télécoms</button>
+                    <button class="filter" onclick="filterProjects(event, 'IA')">IA</button>
                 </div>
 
                 <div class="projects-grid" id="academic-projects">
+
+                    <div class="project-card" data-cat="IA">
+                       <div class="card-media contain"><img src="img/ollama.webp" alt="Logo ollama" loading="lazy"></div>
+                      <div class="content">
+                        <h3>IA locale</h3>
+                        <p>Mis en place et configuration d'une IA en locale via Ollama sur un serveur Linux (Ubuntu) : Communication avec une Intelligence artificielle complétement sécurisé et souveraine</p>
+                        <div class="tags">
+                          <span>IA</span><span>Ollama</span><span>Linux</span>
+                        </div>
+                        <!-- <a href="doc/401.pdf" class="btn">Voir plus</a> -->
+                      </div>
+                    </div>
+
+                    <div class="project-card" data-cat="IA">
+                       <div class="card-media contain"><img src="img/n8n.png" alt="Logo n8n" loading="lazy"></div>
+                      <div class="content">
+                        <h3>Automatisation & agent IA</h3>
+                        <p>Création d'une automatisation avec agent IA sur le logiciel n8n : Rédaction et trie des mails, discution via messagerie (Whatsapp/Telegram)...</p>
+                        <div class="tags">
+                          <span>Agent IA</span><span>n8n</span><span>Automatisation</span>
+                        </div>
+                        <!-- <a href="doc/" class="btn">Voir plus</a> -->
+                      </div>
+                    </div>
+                                
 
                     <div class="project-card" data-cat="reseau">
                         <div class="card-media contain"><img src="img/stormshield.webp" alt="Logo Stormshield" loading="lazy"></div>
@@ -321,6 +347,16 @@
                             <p>Sécurisation d'un réseau avec un pare-feu Stormshield : mise en place de règles de filtrage et de NAT, d'une DMZ et d'un LAN.</p>
                             <div class="tags"><span>Stormshield</span><span>Firewall</span><span>NAT</span></div>
                             <a href="doc/401.pdf" target="_blank" rel="noopener" class="link-more">Voir le rapport</a>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-cat="reseau">
+                        <div class="card-media contain"><img src="img/proxmox.png" alt="Logo Proxmox" loading="lazy"></div>
+                        <div class="content">
+                            <h3>Virtualisation Proxmox</h3>
+                            <p>Virtualisation sous l'hyperviseur de type 1 Proxmox : Déploiement de VM, mise en place de LAB virtuel, mis en place de redondance/HA. </p>
+                            <div class="tags"><span>Virtualisation</span><span>Proxmox</span><span>Bare-Metal</span></div>
+                            <!-- <a href="doc/401.pdf" target="_blank" rel="noopener" class="link-more">Voir le rapport</a> -->
                         </div>
                     </div>
 
@@ -334,6 +370,16 @@
                         </div>
                     </div>
 
+                    <div class="project-card" data-cat="Système">
+                        <div class="card-media contain"><img src="img/boutique.jpg" alt="Boutique" loading="lazy"></div>
+                        <div class="content">
+                            <h3>Dévéloppement d'une boutique en ligne</h3>
+                            <p>Dévéloppement d'une boutique en ligne en Typesctipt avec catalogue, dashboard d'administration et paiements intégré (Stripe).</p>
+                            <div class="tags"><span>e-Boutique</span><span>Typescript</span><span>Dev</span></div>
+                            <!-- <a href="doc/tp2410.pdf" target="_blank" rel="noopener" class="link-more">Voir le rapport</a> -->
+                        </div>
+                    </div>
+
                     <div class="project-card" data-cat="telecom">
                         <div class="card-media contain"><img src="img/tp2410.png" alt="Topologie BGP" loading="lazy"></div>
                         <div class="content">
@@ -341,6 +387,16 @@
                             <p>Création d'un mini-réseau d'opérateur et mise en place de relations de peering et de transit BGP avec un autre opérateur, simulé par une autre équipe.</p>
                             <div class="tags"><span>BGP</span><span>Peering</span><span>Transit</span></div>
                             <a href="doc/tp2410.pdf" target="_blank" rel="noopener" class="link-more">Voir le rapport</a>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-cat="IA">
+                        <div class="card-media contain"><img src="img/motion.jpg" alt="Motion Design" loading="lazy"></div>
+                        <div class="content">
+                            <h3>Réalisation de vidéo en motion design</h3>
+                            <p>Réalisation de vidéo en motion design avec Claude code idéale pour de la publicité.</p>
+                            <div class="tags"><span>Motion Design</span><span>Claude</span><span>Publicité</span></div>
+                            <!-- <a href="doc/tp2410.pdf" target="_blank" rel="noopener" class="link-more">Voir le rapport</a> -->
                         </div>
                     </div>
 
@@ -484,7 +540,7 @@
                 </div>
 
                 <!-- Projets personnels -->
-                <div class="section-head">
+                <!-- <div class="section-head">
                     <span class="section-num">02</span>
                     <h2>Projets personnels</h2>
                 </div>
@@ -508,7 +564,7 @@
                             <div class="tags"><span>Automatisation</span><span>Agents IA</span></div>
                         </div>
                     </div>
-                </div>
+                </div> -->
 
                 <!-- Projets bénévoles -->
                 <div class="section-head">
